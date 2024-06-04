@@ -6,6 +6,8 @@ const nextConfig = {
   basePath: '/smacks',
   images: {
     domains: ["localhost"],
+    loader: 'custom',
+    loaderFile: './customImageLoader.js',
     remotePatterns: [
       {
         protocol: "https",
