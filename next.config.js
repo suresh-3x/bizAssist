@@ -3,6 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/smacks',
   images: {
     domains: ["localhost"],
     remotePatterns: [
