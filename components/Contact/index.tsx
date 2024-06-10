@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
-            <motion.div
+            {/* <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
@@ -154,9 +154,9 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
@@ -200,7 +200,7 @@ const Contact = () => {
                   <a href="#">+009 42334 6343 843</a>
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>

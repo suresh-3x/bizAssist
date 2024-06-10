@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { address, email, phoneNumber, phoneNumberLabel } from "../Contact/data";
 
 const Footer = () => {
   return (
@@ -52,15 +53,65 @@ const Footer = () => {
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
                 </p>
-                <a
-                  href="#"
+                <div
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  hello@solid.com
-                </a>
+                  <a className="block" href={`tel:${phoneNumber}`}>{phoneNumberLabel}</a>
+                  <a className="block" href={`mailto:${email}`}>{email}</a>
+                </div>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -20,
+                    },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 2, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="animate_top"
+                >
+                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                    Find us
+                  </h4>
+
+                  {
+                    address ? (
+                      <div className="mb-7">
+                        <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                          Our Location
+                        </h3>
+                        <p>{address}</p>
+                      </div>
+                    ) : null
+                  }
+
+                  <div className="mb-7">
+                    <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                      Email Address
+                    </h3>
+                    <p>
+                      <a className="block" href={`mailto:${email}`}>{email}</a>
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                      Phone Number
+                    </h4>
+                    <p>
+                      <a className="block" href={`tel:${phoneNumber}`}>{phoneNumberLabel}</a>
+                    </p>
+                  </div>
+                </motion.div>
+                
                 <motion.div
                   variants={{
                     hidden: {
@@ -176,8 +227,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </motion.div>
-
-                <motion.div
+                {/* <motion.div
                   variants={{
                     hidden: {
                       opacity: 0,
@@ -237,7 +287,7 @@ const Footer = () => {
                       </button>
                     </div>
                   </form>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>
@@ -301,7 +351,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} BizAssist. All rights reserved
               </p>
             </motion.div>
 

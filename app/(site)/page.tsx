@@ -14,8 +14,8 @@ import Contact from "@/components/Contact";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Next.js Starter Template for SaaS Startups - BizAssist SaaS Boilerplate",
+  description: "This is Home for BizAssist Pro",
   // other metadata
 };
 
@@ -29,12 +29,13 @@ export default function Home() {
       <FeaturesTab />
       <FunFact />
       <Integration />
-      <CTA />
-      <FAQ />
-      <Testimonial />
+      {/* <CTA /> */}
+      {/* <FAQ /> */}
+      {/* <Testimonial /> */}
       <Pricing />
-      <Contact />
+      {/* <Contact /> */}
       {/* <Blog /> */}
     </main>
   );
 }
+//  TODO: update logo and update brands logo
