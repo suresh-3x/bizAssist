@@ -13,11 +13,11 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: "BizAssist Features",
+              title: "BizAssist Services",
               subtitle: "Core Features of BizAssist",
               description: `Whether you need a brand new website, a user-friendly mobile app, or any other digital product, our team has the expertise to guide you through the entire process.
               We don't just build products - we build partnerships. We work closely with you to understand your unique needs and goals, and then craft a solution that exceeds expectations.
-              From concept to launch and beyond, BizAssist Agency is there to support you every step of the way.`,
+              From concept to launch and beyond, BizAssist is there to support you every step of the way.`,
             }}
           />
           {/* <!-- Section Title End --> */}

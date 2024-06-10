@@ -6,13 +6,13 @@ import SectionHeader from "../Common/SectionHeader";
 const Integration = () => {
   return (
     <>
-      <section>
+      <section id="integrations-section">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
               title: `INTEGRATIONS`,
-              subtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`,
+              subtitle: `All your website needs are served under the roof of BizAssist.`,
               description: `Unlock the power of seamless integration with our cutting-edge solutions. Whether you're managing data, streamlining workflows, or enhancing collaboration, our platform empowers you to maintain control from anywhere, at any time.`,
             }}
           />

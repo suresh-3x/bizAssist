@@ -94,14 +94,15 @@ const Footer = () => {
                         Home
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Product
                       </a>
-                    </li>
+                    </li> */}
+                    {/* TODO: send us ur resumt at email */}
                     <li>
                       <a
                         href="/coming-soon"
@@ -110,6 +111,7 @@ const Footer = () => {
                         Careers
                       </a>
                     </li>
+                    {/* TODO: redirect to pricing section */}
                     <li>
                       <a
                         href="/coming-soon"
@@ -139,44 +141,6 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Support
-                  </h4>
-
-                  <ul>
-                    <li>
-                      <a
-                        href="/coming-soon"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Company
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/coming-soon"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Press media
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/coming-soon"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/support"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
                 </motion.div>
                 {/* <motion.div
                   variants={{
@@ -266,18 +230,18 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-8">
                 <li>
-                  <a href="#" className="hover:text-primary">
-                    English
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary">
+                  <a href="/coming-soon" className="hover:text-primary">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
-                    Support
+                  <a href="/coming-soon" className="hover:text-primary">
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="/coming-soon" className="hover:text-primary">
+                    Refund & Cancellation
                   </a>
                 </li>
               </ul>
@@ -302,7 +266,9 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} BizAssist. All rights reserved
+                {/* &copy; {new Date().getFullYear()} BizAssist. All rights reserved */}
+                &copy; 2023 BizAssist. All rights reserved
+
               </p>
             </motion.div>
 

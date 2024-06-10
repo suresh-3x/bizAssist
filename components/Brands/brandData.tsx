@@ -36,13 +36,13 @@ const brandData: Brand[] = [
     image: "/images/brand/bbps-dark.svg",
     imageLight: "/images/brand/bbps-light.svg",
   },
-  // {
-  //   id: 0.7,
-  //   name: "Client",
-  //   href: "#",
-  //   image: "/images/brand/brand-light-06.svg",
-  //   imageLight: "/images/brand/brand-dark-06.svg",
-  // },
+  {
+    id: 0.7,
+    name: "Client",
+    href: "#",
+    image: "/images/brand/woocommerce-light.svg",
+    imageLight: "/images/brand/woocommerce-dark.svg",
+  },
 ];
 
 export default brandData;

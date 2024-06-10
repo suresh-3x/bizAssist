@@ -18,21 +18,21 @@ const featuresData: Feature[] = [
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    title: "  Website Optimisation",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
   },
   {
     id: 4,
     icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
+    title: "Social Media Marketing",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
   },
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
+    title: "Payment Gateway Integration",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
   },
