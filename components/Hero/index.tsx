@@ -2,38 +2,49 @@
 import Image from "next/image";
 import { useState } from "react";
 import LottieAnimation from "./animation";
-import { MongoClient } from 'mongodb';
+import { toast } from 'react-hot-toast';
 
 
 
 const Hero = () => {
   const [email, setEmail] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await submitEmail(email);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      toast.error('Invalid email address');
+      return;
+    }
+
+    try {
+      await submitEmail(email);
+      setIsSuccess(true);
+      toast.success('Request received, we will connect shortly!');
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setIsSuccess(false)
+      toast.error('Action failed');
+    }
   };
   
 const submitEmail = async (email) => {
-  try {
-    const response = await fetch('/api/submitEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to submit email');
-    }
-
-    const data = await response.json();
-    console.log(data.message);
-  } catch (error) {
-    console.error('Error submitting email:', error);
+  const response = await fetch('/api/submitEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email }),
+  });
+  if (!response.ok) {
+    throw new Error('Failed to submit email');
   }
+
+  const data = await response.json();
+  console.log(data.message);
 };
 
   return (
@@ -55,7 +66,7 @@ const submitEmail = async (email) => {
                 BizAssist is your one-stop solution for bringing your digital vision to life. We're a team of passionate experts dedicated to helping businesses like yours build impactful websites, apps, and other technical solutions.
               </p>
 
-              <div className="mt-10">
+              {!isSuccess ? <div className="mt-10">
                 <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap gap-5">
                     <input
@@ -78,7 +89,7 @@ const submitEmail = async (email) => {
                 <p className="mt-5 text-black dark:text-white">
                   Try for free no credit card required.
                 </p> */}
-              </div>
+              </div> : ""}
             </div>
 
             <div className="animate_right hidden md:w-1/2 lg:block">
