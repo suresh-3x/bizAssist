@@ -72,8 +72,7 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+               Our team has a successful track record of helping brands scale profitably based on high-performing strategies.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -140,8 +139,7 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+                We offer integrations with wide range of tools and services. Custom integrations is also possible with the help of our inhouse developers.
               </p>
               <div>
                 <a

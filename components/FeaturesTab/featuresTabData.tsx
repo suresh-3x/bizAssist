@@ -4,8 +4,8 @@ const featuresTabData: FeatureTab[] = [
   {
     id: "tabOne",
     title: "BizAssist Has Neat & Clean User Interface.",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
+    desc1: `Our platform empowers users with seamless navigation, allowing for quick access to essential features and tools. Whether you are managing tasks, tracking projects, or communicating with your team, BizAssist ensures a smooth and productive experience.`,
+    desc2: `Enhance your workflow with our user-friendly dashboard, customizable settings, and robust support options. BizAssist adapts to your needs, providing a reliable solution for all your business management requirements.`,
     image: "/images/features/features-light-01.png",
     imageDark: "/images/features/features-dark-01.svg",
   },

@@ -47,7 +47,7 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Assissting Bussiness Worldwide!
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -137,7 +137,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
@@ -145,7 +145,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Product
@@ -153,7 +153,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Careers
@@ -161,7 +161,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Pricing
@@ -195,7 +195,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Company
@@ -203,7 +203,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Press media
@@ -211,7 +211,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/coming-soon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Our Blog
@@ -219,7 +219,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/support"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us

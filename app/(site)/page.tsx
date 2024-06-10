@@ -14,8 +14,8 @@ import Contact from "@/components/Contact";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - BizAssist SaaS Boilerplate",
-  description: "This is Home for BizAssist Pro",
+  title: "Assissting Bussiness Worldwide",
+  description: "This is Home for BizAssist",
   // other metadata
 };
 
@@ -26,7 +26,7 @@ export default function Home() {
       <Brands />
       <Feature />
       <About />
-      <FeaturesTab />
+      {/* <FeaturesTab /> */}
       <FunFact />
       <Integration />
       {/* <CTA /> */}
