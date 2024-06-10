@@ -17,7 +17,7 @@ const menuData: Menu[] = [
     id: 2.1,
     title: "Integrations/Pricing",
     newTab: false,
-    path: "/#integrations-section",
+    path: "/#integrations",
   },
   // {
   //   id: 2.3,

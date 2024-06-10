@@ -63,7 +63,7 @@ const About = () => {
                 <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
                   New
                 </span>{" "}
-                Explore your integration
+                Explore our solutions
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 A Complete Solution for
@@ -96,7 +96,8 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Startegic approach to scale you E-commerce brand
+                    Strategic approach to scale your
+                    <br></br> E-commerce brand
                   </h3>
                   {/* <p>Freedom to customize each pixel.</p> */}
                 </div>
@@ -130,7 +131,7 @@ const About = () => {
               className="animate_left md:w-1/2"
             >
               <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
+                LAUNCH YOUR E-COMMERCE STORE WITH US
               </h4>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 Packed with All Essential {"   "}

@@ -271,7 +271,7 @@ const Footer = () => {
 
               </p>
             </motion.div>
-
+{/* 
             <motion.div
               variants={{
                 hidden: {
@@ -384,7 +384,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </motion.div>
+            </motion.div> */}
           </div>
           {/* <!-- Footer Bottom --> */}
         </div>
