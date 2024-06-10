@@ -11,57 +11,8 @@ const Footer = () => {
           {/* <!-- Footer Top --> */}
           <div className="py-20 lg:py-25">
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
-              <motion.div
-                variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: -20,
-                  },
 
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                  },
-                }}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 1, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="animate_top w-1/2 lg:w-1/4"
-              >
-                <a href="index.html" className="relative">
-                  <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-light.svg"
-                    alt="Logo"
-                    className="dark:hidden"
-                  />
-                  <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-dark.svg"
-                    alt="Logo"
-                    className="hidden dark:block"
-                  />
-                </a>
-
-                <p className="mb-10 mt-5">
-                  Assissting Bussiness Worldwide!
-                </p>
-
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
-                </p>
-                <div
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
-                  <a className="block" href={`tel:${phoneNumber}`}>{phoneNumberLabel}</a>
-                  <a className="block" href={`mailto:${email}`}>{email}</a>
-                </div>
-              </motion.div>
-
-              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-around md:gap-0 lg:w-full xl:w-full">
                 <motion.div
                   variants={{
                     hidden: {
@@ -80,7 +31,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Find us
+                    Contact
                   </h4>
 
                   {

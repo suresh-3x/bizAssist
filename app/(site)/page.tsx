@@ -14,7 +14,7 @@ import Contact from "@/components/Contact";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Assissting Bussiness Worldwide",
+  title: "Assisting Business Worldwide",
   description: "This is Home for BizAssist",
   // other metadata
 };
