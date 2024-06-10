@@ -1,13 +1,40 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import LottieAnimation from "./animation";
+import { MongoClient } from 'mongodb';
+
+
 
 const Hero = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await submitEmail(email);
   };
+  
+const submitEmail = async (email) => {
+  try {
+    const response = await fetch('/api/submitEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit email');
+    }
+
+    const data = await response.json();
+    console.log(data.message);
+  } catch (error) {
+    console.error('Error submitting email:', error);
+  }
+};
 
   return (
     <>
@@ -39,6 +66,7 @@ const Hero = () => {
                       className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                     />
                     <button
+                      onClick={handleSubmit}
                       aria-label="get started button"
                       className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                     >
@@ -77,18 +105,12 @@ const Hero = () => {
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
                 <div className=" relative aspect-[700/444] w-full">
-                  <Image
-                    className="shadow-solid-l dark:hidden"
-                    src="/images/hero/hero.gif"
-                    alt="Hero"
-                    fill
-                  />
-                  <Image
-                    className="hidden shadow-solid-l dark:block"
-                    src="/images/hero/hero.gif"
-                    alt="Hero"
-                    fill
-                  />
+                <div className="shadow-solid-l dark:hidden">
+                <LottieAnimation width="600px" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
+                </div>
+                <div className="hidden shadow-solid-l dark:block">
+                <LottieAnimation width="600px" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
+                </div>
                 </div>
               </div>
             </div>

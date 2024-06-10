@@ -102,19 +102,17 @@ const Footer = () => {
                         Product
                       </a>
                     </li> */}
-                    {/* TODO: send us ur resumt at email */}
                     <li>
                       <a
-                        href="/coming-soon"
+                        href="/career"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Careers
                       </a>
                     </li>
-                    {/* TODO: redirect to pricing section */}
                     <li>
                       <a
-                        href="/coming-soon"
+                        href="/#pricing"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Pricing

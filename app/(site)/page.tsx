@@ -15,7 +15,7 @@ import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Assisting Business Worldwide",
-  description: "This is Home for BizAssist",
+  description: "This is home for E-commerce Startups",
   // other metadata
 };
 
