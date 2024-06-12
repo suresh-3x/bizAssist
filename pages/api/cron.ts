@@ -2,7 +2,7 @@ import { MongoClient, MongoClientOptions } from 'mongodb';
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
-  const uri: string | undefined = process.env.MONGO_URI;
+  const uri: string | undefined = process.env.MONGODB_URI;
   if (!uri) {
     return res.status(500).json({ error: 'MongoDB URI is not defined' });
   }
