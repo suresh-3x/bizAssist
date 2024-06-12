@@ -19,8 +19,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const database = client.db('Cluster0');
     const collection = database.collection('emails');
+    const timestamp = new Date().toISOString();
 
-    await collection.insertOne({ email });
+    await collection.insertOne({ email, timestamp });
 
     res.status(200).json({ message: 'Email submitted successfully' });
   } catch (error) {
