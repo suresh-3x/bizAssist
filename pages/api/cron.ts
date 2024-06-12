@@ -2,7 +2,7 @@ import { MongoClient, MongoClientOptions } from 'mongodb';
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
-  const uri: string | undefined = process.env.MONGODB_URI;
+  const uri = process.env.MONGODB_URI;
   if (!uri) {
     return res.status(500).json({ error: 'MongoDB URI is not defined' });
   }
@@ -20,17 +20,15 @@ export default async function handler(req, res) {
     const database = client.db('Cluster0');
     const collection = database.collection('emails');
 
-    // Calculate start of today in IST
-    const currentDate = new Date();
-
+    // Convert IST dates from query parameters to UTC
     let startOfDayUTC;
     if (startDate) {
       const startDateTime = new Date(startDate);
       startOfDayUTC = startDateTime.toISOString();
     } else {
-      const startOfDayIST = new Date(currentDate.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'}));
-      startOfDayIST.setHours(0, 0, 0, 0);
-      startOfDayUTC = new Date(startOfDayIST).toISOString();
+      const currentDateIST = new Date();
+      currentDateIST.setHours(0, 0, 0, 0);
+      startOfDayUTC = currentDateIST.toISOString();
     }
 
     let currentDateUTC;
@@ -38,15 +36,16 @@ export default async function handler(req, res) {
       const endDateTime = new Date(endDate);
       currentDateUTC = endDateTime.toISOString();
     } else {
-      currentDateUTC = currentDate.toISOString();
+      currentDateUTC = new Date().toISOString();
     }
 
     const emails = await collection.find({
       timestamp: { $gte: startOfDayUTC, $lte: currentDateUTC }
     }).toArray();
 
+    // Convert timestamps from UTC to IST for display
     emails.forEach(email => {
-      email.timestamp = new Date(email.timestamp).toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'});
+      email.timestampIST = new Date(email.timestamp).toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'});
     });
 
     let tableHtml = `
@@ -85,7 +84,7 @@ export default async function handler(req, res) {
       tableHtml += `
         <tr>
           <td>${email.email}</td>
-          <td>${email.timestamp}</td>
+          <td>${email.timestampIST}</td>
         </tr>
       `;
     });
