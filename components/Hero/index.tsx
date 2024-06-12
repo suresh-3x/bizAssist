@@ -51,7 +51,7 @@ const submitEmail = async (email) => {
     <>
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-          <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
+          <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 Looking to craft a cutting-edge digital product?
@@ -92,7 +92,7 @@ const submitEmail = async (email) => {
               </div> : ""}
             </div>
 
-            <div className="animate_right hidden md:w-1/2 lg:block">
+            <div className="animate_right md:w-1/2">
               <div className="relative 2xl:-mr-7.5">
                 <Image
                   src="/images/shape/shape-01.png"
@@ -117,10 +117,10 @@ const submitEmail = async (email) => {
                 />
                 <div className=" relative aspect-[700/444] w-full">
                 <div className="shadow-solid-l dark:hidden">
-                <LottieAnimation width="600px" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
+                <LottieAnimation width="100%" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
                 </div>
                 <div className="hidden shadow-solid-l dark:block">
-                <LottieAnimation width="600px" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
+                <LottieAnimation width="100%" animationUrl={"https://lottie.host/6e5503cc-41ce-4ee9-bd7e-d0df8ae64bed/RKj8KMzEWD.json"}/>
                 </div>
                 </div>
               </div>
