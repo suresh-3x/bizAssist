@@ -265,7 +265,7 @@ const Footer = () => {
             >
               <p>
                 {/* &copy; {new Date().getFullYear()} BizAssist. All rights reserved */}
-                &copy; 2023 BizAssist. All rights reserved
+                &copy; 2023 JOVRAB TECHNOLOGIES LLP. All rights reserved
 
               </p>
             </motion.div>
