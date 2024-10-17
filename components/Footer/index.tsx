@@ -228,17 +228,17 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-8">
                 <li>
-                  <a href="/coming-soon" className="hover:text-primary">
+                  <a href="/privacy-policy" className="hover:text-primary">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/coming-soon" className="hover:text-primary">
+                  <a href="/terms-and-conditions" className="hover:text-primary">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="/coming-soon" className="hover:text-primary">
+                  <a href="/refund-and-cancellation" className="hover:text-primary">
                     Refund & Cancellation
                   </a>
                 </li>

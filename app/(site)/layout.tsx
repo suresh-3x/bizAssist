@@ -31,7 +31,9 @@ export default function RootLayout({
           <Lines />
           <Header />
           <ToasterContext />
-          {children}
+          <main className="pt-24">
+            {children}
+          </main>
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
