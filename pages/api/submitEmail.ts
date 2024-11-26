@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     await client.connect();
 
-    const database = client.db('Cluster0');
+    const database = client.db('Bizassist');
     const collection = database.collection('emails');
     const timestamp = new Date().toISOString();
 
