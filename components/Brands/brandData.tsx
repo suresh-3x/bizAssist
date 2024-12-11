@@ -40,8 +40,8 @@ const brandData: Brand[] = [
     id: 0.7,
     name: "Client",
     href: "#",
-    image: "/images/brand/woocommerce-light.svg",
-    imageLight: "/images/brand/woocommerce-dark.svg",
+    image: "/images/brand/salesforce.svg",
+    imageLight: "/images/brand/salesforce.svg",
   },
 ];
 
