@@ -104,7 +104,7 @@
 
 //     const mailOptions = {
 //       from: process.env.GMAIL_SMTP_EMAIL_FROM,
-//       to: 'info@bizassist.online',
+//       to: 'partnership@bizassist.online',
 //       cc: ['suresh.37x@gmail.com'],
 //       subject: `List of Emails with Timestamps (${startDateIST} - ${endDateIST})`,
 //       html: tableHtml
