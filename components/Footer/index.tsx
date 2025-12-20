@@ -13,55 +13,7 @@ const Footer = () => {
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-around md:gap-0 lg:w-full xl:w-full">
-                <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 2, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Contact
-                  </h4>
 
-                  {
-                    address ? (
-                      <div className="mb-7">
-                        <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                          Our Location
-                        </h3>
-                        <p>{address}</p>
-                      </div>
-                    ) : null
-                  }
-
-                  <div className="mb-7">
-                    <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                      Email Address
-                    </h3>
-                    <p>
-                      <a className="block" href={`mailto:${email}`}>{email}</a>
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                      Phone Number
-                    </h4>
-                    <p>
-                      <a className="block" href={`tel:${phoneNumber}`}>{phoneNumberLabel}</a>
-                    </p>
-                  </div>
-                </motion.div>
                 
                 <motion.div
                   variants={{
