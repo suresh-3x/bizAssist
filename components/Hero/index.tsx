@@ -2,50 +2,23 @@
 import Image from "next/image";
 import { useState } from "react";
 import LottieAnimation from "./animation";
-import { toast } from 'react-hot-toast';
-
-
+import GetStartedModal from "../GetStartedModal";
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      toast.error('Invalid email address');
-      return;
-    }
-
-    try {
-      await submitEmail(email);
-      setIsSuccess(true);
-      toast.success('Request received, we will connect shortly!');
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setIsSuccess(false)
-      toast.error('Action failed');
-    }
+  const handleGetStartedClick = () => {
+    setIsModalOpen(true);
   };
-  
-const submitEmail = async (email) => {
-  const response = await fetch('/api/submitEmail', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email }),
-  });
-  if (!response.ok) {
-    throw new Error('Failed to submit email');
-  }
 
-  const data = await response.json();
-  console.log(data.message);
-};
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormSuccess = () => {
+    setHasSubmitted(true);
+  };
 
   return (
     <>
@@ -66,30 +39,17 @@ const submitEmail = async (email) => {
                 BizAssist is your one-stop solution for bringing your digital vision to life. We're a team of passionate experts dedicated to helping businesses like yours build impactful websites, apps, and other technical solutions.
               </p>
 
-              {!isSuccess ? <div className="mt-10">
-                <form onSubmit={handleSubmit}>
-                  <div className="flex flex-wrap gap-5">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="text"
-                      placeholder="Enter your email address"
-                      className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                    />
-                    <button
-                      onClick={handleSubmit}
-                      aria-label="get started button"
-                      className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
-                    >
-                      Get Started
-                    </button>
-                  </div>
-                </form>
-{/* 
-                <p className="mt-5 text-black dark:text-white">
-                  Try for free no credit card required.
-                </p> */}
-              </div> : ""}
+              {!hasSubmitted && (
+                <div className="mt-10">
+                  <button
+                    onClick={handleGetStartedClick}
+                    aria-label="get started button"
+                    className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  >
+                    Get Started
+                  </button>
+                </div>
+              )}
             </div>
 
             <div className="animate_right md:w-1/2">
@@ -128,6 +88,11 @@ const submitEmail = async (email) => {
           </div>
         </div>
       </section>
+      <GetStartedModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal}
+        onSuccess={handleFormSuccess}
+      />
     </>
   );
 };
