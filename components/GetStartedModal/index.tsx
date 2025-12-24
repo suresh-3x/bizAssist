@@ -110,21 +110,17 @@ const GetStartedModal = ({ isOpen, onClose, onSuccess }: GetStartedModalProps) =
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with actual API endpoint when backend is ready
-      // const response = await fetch('/api/submitContactForm', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
-      // 
-      // if (!response.ok) {
-      //   throw new Error('Failed to submit form');
-      // }
+      const response = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Simulate API call for now
-      await new Promise((resolve) => setTimeout(resolve, 1800));
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
 
       toast.success("Thank you! We'll get back to you shortly.");
       
@@ -354,7 +350,7 @@ const GetStartedModal = ({ isOpen, onClose, onSuccess }: GetStartedModalProps) =
                   ? "border-red-500 dark:border-red-500"
                   : "border-stroke dark:border-strokedark"
               }`}
-              placeholder="Tell us about your project (optional)"
+              placeholder="Tell us about your project "
             />
             {errors.message && (
               <p
